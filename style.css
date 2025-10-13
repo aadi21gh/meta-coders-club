@@ -105,3 +105,96 @@ nav a:hover{color:var(--accent);transform:translateY(-1px);transition:all .18s}
   .row-posters{gap:10px}
   .card{min-width:170px}
 }
+.events-section {
+  padding: 80px 50px;
+  background: linear-gradient(to bottom, #0a0a0a, #111);
+  color: #fff;
+}
+
+.event-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.event-hero h3 {
+  font-size: 2rem;
+  color: #e50914;
+}
+
+.event-hero p {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.event-hero .btn {
+  padding: 10px 25px;
+  background-color: #e50914;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.event-hero .btn:hover {
+  background-color: #b0060f;
+  transform: scale(1.05);
+}
+
+.event-details ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 40px;
+}
+
+.event-details li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.event-gallery .gallery-row {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+.event-gallery img {
+  width: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.event-gallery img:hover {
+  transform: scale(1.05);
+}
+
+.output-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.output-card {
+  flex: 1 1 300px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.output-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(229,9,20,0.4);
+}
+
+.event-video {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.event-video iframe {
+  width: 90%;
+  max-width: 700px;
+  border-radius: 10px;
+}
+
