@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Meta Coders Club</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <div class="logo">Meta Coders Club</div>
+    <div class="brand">
+      <img src="/images/logo.png" alt="Meta Coders Club" class="logo" />
+      <div class="brand-text">Meta Coders Club</div>
+    </div>
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
@@ -21,45 +23,48 @@
     </nav>
   </header>
 
-  <!-- Featured Slider -->
+  <!-- Featured slider -->
   <section class="featured-slider">
     <div class="slider">
-      <div class="slide active" style="background-image: url('https://source.unsplash.com/1600x600/?ai');">
+      <div class="slide active" style="background-image:url('https://source.unsplash.com/1600x600/?ai');">
         <div class="slide-content">
           <h2>AI & ML Community</h2>
-          <p>Join projects, workshops, and hackathons in Artificial Intelligence & Machine Learning.</p>
-          <button data-modal="AI-ML">Explore</button>
+          <p>Join projects, workshops and hackathons in Artificial Intelligence & Machine Learning.</p>
+          <button class="modal-btn" data-modal="AI-ML">Explore</button>
         </div>
       </div>
-      <div class="slide" style="background-image: url('https://source.unsplash.com/1600x600/?web,development');">
+      <div class="slide" style="background-image:url('https://source.unsplash.com/1600x600/?web,development');">
         <div class="slide-content">
           <h2>Web Development</h2>
           <p>Build modern websites and web apps using the latest technologies.</p>
-          <button data-modal="WebDev">Explore</button>
+          <button class="modal-btn" data-modal="WebDev">Explore</button>
         </div>
       </div>
-      <div class="slide" style="background-image: url('https://source.unsplash.com/1600x600/?datascience');">
+      <div class="slide" style="background-image:url('https://source.unsplash.com/1600x600/?datascience');">
         <div class="slide-content">
           <h2>Data Science</h2>
           <p>Analyze and visualize data, implement ML models, and gain insights.</p>
-          <button data-modal="DataScience">Explore</button>
+          <button class="modal-btn" data-modal="DataScience">Explore</button>
         </div>
       </div>
     </div>
+
     <div class="slider-controls">
       <span class="prev">&#10094;</span>
       <span class="next">&#10095;</span>
     </div>
   </section>
 
-  <!-- Hero Section -->
+  <!-- Home / hero -->
   <section class="hero" id="home">
-    <h1>Welcome to Meta Coders Club</h1>
-    <p>Stream Coding Knowledge. Learn. Build. Connect.</p>
-    <div class="home-details">
-      <p>
-        Meta Coders Club is a vibrant community for coding enthusiasts. We organize challenges, hackathons, workshops, and projects to foster innovation, collaboration, and skill development. Join us to learn, build, and make an impact in the tech world.
+    <div class="hero-inner">
+      <img src="/images/logo.png" alt="logo-glow" class="hero-logo" />
+      <h1>Welcome to Meta Coders Club</h1>
+      <p class="subtitle">Where Coders Create, Collaborate, and Conquer.</p>
+      <p class="lead">
+        A vibrant community organizing challenges, workshops, hackathons and projects to help you learn and build real systems.
       </p>
+      <a href="#contact" class="cta">Join Us</a>
     </div>
   </section>
 
@@ -67,62 +72,68 @@
   <section class="row" id="communities">
     <h2>Featured Communities</h2>
     <div class="row-posters">
-      <div class="card">
+      <article class="card">
         <div class="overlay"></div>
         <div class="card-content">
           <h3>AI & ML</h3>
-          <p>Explore Artificial Intelligence and Machine Learning projects, workshops, and discussions.</p>
-          <button data-modal="AI-ML">Explore</button>
+          <p>Projects, workshops and hackathons in Machine Learning and AI.</p>
+          <button class="modal-btn" data-modal="AI-ML">Explore</button>
         </div>
-      </div>
-      <div class="card">
+      </article>
+
+      <article class="card">
         <div class="overlay"></div>
         <div class="card-content">
           <h3>Web Development</h3>
-          <p>Build amazing websites and web applications using modern technologies.</p>
-          <button data-modal="WebDev">Explore</button>
+          <p>Frontend, backend and modern web app stacks.</p>
+          <button class="modal-btn" data-modal="WebDev">Explore</button>
         </div>
-      </div>
-      <div class="card">
+      </article>
+
+      <article class="card">
         <div class="overlay"></div>
         <div class="card-content">
           <h3>Data Science</h3>
-          <p>Analyze and visualize data, implement ML models, and gain insights.</p>
-          <button data-modal="DataScience">Explore</button>
+          <p>Data analysis, visualizations and ML workflows.</p>
+          <button class="modal-btn" data-modal="DataScience">Explore</button>
         </div>
-      </div>
-      <div class="card">
+      </article>
+
+      <article class="card">
         <div class="overlay"></div>
         <div class="card-content">
           <h3>Cyber Security</h3>
-          <p>Learn ethical hacking, security best practices, and system protection.</p>
-          <button data-modal="CyberSecurity">Explore</button>
+          <p>Ethical hacking, security best practices and CTFs.</p>
+          <button class="modal-btn" data-modal="CyberSecurity">Explore</button>
         </div>
-      </div>
-      <div class="card">
+      </article>
+
+      <article class="card">
         <div class="overlay"></div>
         <div class="card-content">
           <h3>DS & Algorithms</h3>
-          <p>Master problem-solving using data structures and algorithms.</p>
-          <button data-modal="DSA">Explore</button>
+          <p>Sharpen problem solving for interviews & contests.</p>
+          <button class="modal-btn" data-modal="DSA">Explore</button>
         </div>
-      </div>
-      <div class="card">
+      </article>
+
+      <article class="card">
         <div class="overlay"></div>
         <div class="card-content">
           <h3>Cloud Computing</h3>
-          <p>Learn cloud platforms like AWS, Azure, and Google Cloud.</p>
-          <button data-modal="Cloud">Explore</button>
+          <p>Deploy and scale apps on AWS, Azure and GCP.</p>
+          <button class="modal-btn" data-modal="Cloud">Explore</button>
         </div>
-      </div>
-      <div class="card">
+      </article>
+
+      <article class="card">
         <div class="overlay"></div>
         <div class="card-content">
           <h3>Other</h3>
-          <p>Explore other niche communities and emerging tech topics.</p>
-          <button data-modal="Other">Explore</button>
+          <p>Niche topics, tools & experimental projects.</p>
+          <button class="modal-btn" data-modal="Other">Explore</button>
         </div>
-      </div>
+      </article>
     </div>
   </section>
 
@@ -130,38 +141,41 @@
   <section class="row" id="challenges">
     <h2>Coding Challenges</h2>
     <div class="row-posters">
-      <div class="card">
+      <article class="card">
         <div class="overlay"></div>
         <div class="card-content">
           <h3>Web Dev Challenge</h3>
-          <p>Build a responsive website in 48 hours.</p>
-          <button data-modal="WebChallenge">Join Challenge</button>
+          <p>Build a responsive site in 48 hours.</p>
+          <button class="modal-btn" data-modal="WebChallenge">Join</button>
         </div>
-      </div>
-      <div class="card">
+      </article>
+
+      <article class="card">
         <div class="overlay"></div>
         <div class="card-content">
           <h3>AI/ML Challenge</h3>
-          <p>Create predictive models using Python.</p>
-          <button data-modal="AIChallenge">Join Challenge</button>
+          <p>Create predictive models and pipelines.</p>
+          <button class="modal-btn" data-modal="AIChallenge">Join</button>
         </div>
-      </div>
-      <div class="card">
+      </article>
+
+      <article class="card">
         <div class="overlay"></div>
         <div class="card-content">
           <h3>Game Dev Contest</h3>
-          <p>Develop a small interactive game.</p>
-          <button data-modal="GameChallenge">Join Challenge</button>
+          <p>Build a small interactive game.</p>
+          <button class="modal-btn" data-modal="GameChallenge">Join</button>
         </div>
-      </div>
-      <div class="card">
+      </article>
+
+      <article class="card">
         <div class="overlay"></div>
         <div class="card-content">
           <h3>Data Science Hack</h3>
-          <p>Analyze datasets and generate insights.</p>
-          <button data-modal="DataChallenge">Join Challenge</button>
+          <p>Analyze data, find insights and present them.</p>
+          <button class="modal-btn" data-modal="DataChallenge">Join</button>
         </div>
-      </div>
+      </article>
     </div>
   </section>
 
@@ -169,14 +183,14 @@
   <section class="row" id="events">
     <h2>Events</h2>
     <div class="row-posters">
-      <div class="card">
+      <article class="card">
         <div class="overlay"></div>
         <div class="card-content">
           <h3>Tech Manthan</h3>
-          <p>Annual coding and innovation event to showcase talent and creativity.</p>
-          <button data-modal="TechManthan">View Details</button>
+          <p>Annual coding & innovation festival of Meta Coders Club.</p>
+          <button class="modal-btn" data-modal="TechManthan">Details</button>
         </div>
-      </div>
+      </article>
     </div>
   </section>
 
@@ -184,74 +198,106 @@
   <section class="row" id="projects">
     <h2>Featured Projects</h2>
     <div class="row-posters">
-      <div class="card">
+      <article class="card">
         <div class="overlay"></div>
         <div class="card-content">
           <h3>Portfolio Website</h3>
-          <p>Showcase your work online with personal portfolios.</p>
-          <button data-modal="Portfolio">View Project</button>
+          <p>Showcase your work with a personal portfolio.</p>
+          <button class="modal-btn" data-modal="Portfolio">View</button>
         </div>
-      </div>
-      
-      <!-- AI Chatbot Project -->
-      <div class="card" id="chatbot-card">
+      </article>
+
+      <!-- Chatbot project card -->
+      <article class="card" id="chatbot-card">
         <div class="overlay"></div>
         <div class="card-content">
           <h3>AI Chatbot</h3>
-          <p>Interact with our AI-powered chatbot!</p>
+          <p>Interact with the in-site AI Chatbot demo.</p>
           <button onclick="openChat()">Open Chatbot</button>
         </div>
-      </div>
+      </article>
 
-      <div class="card">
+      <article class="card">
         <div class="overlay"></div>
         <div class="card-content">
           <h3>Game Dev</h3>
-          <p>Build fun and interactive 2D/3D games.</p>
-          <button data-modal="GameDev">View Project</button>
+          <p>2D/3D game projects and prototypes.</p>
+          <button class="modal-btn" data-modal="GameDev">View</button>
         </div>
-      </div>
-      <div class="card">
+      </article>
+
+      <article class="card">
         <div class="overlay"></div>
         <div class="card-content">
           <h3>Data Visualizer</h3>
-          <p>Interactive charts and dashboards using JS libraries.</p>
-          <button data-modal="DataViz">View Project</button>
+          <p>Interactive dashboards and charts made with JS.</p>
+          <button class="modal-btn" data-modal="DataViz">View</button>
         </div>
-      </div>
+      </article>
     </div>
   </section>
 
   <!-- Contact -->
-  <section class="row" id="contact">
+  <section class="row contact-row" id="contact">
     <h2>Contact</h2>
-    <div class="contact-details">
-      <p><strong>Faculty Coordinator:</strong> Sarita Charkha</p>
-      <p><strong>President:</strong> Vedant Sankpal</p>
-      <p><strong>Technical Head:</strong> _______</p>
-      <p><strong>Social Media Head:</strong> _______</p>
-      <p><strong>PR Head:</strong> _______</p>
-      <p><strong>Multimedia Head:</strong> _______</p>
+    <div class="contact-grid">
+      <div class="profile">
+        <img src="/images/faculty.jpg" alt="Sarita Charkha" />
+        <h4>Sarita Charkha</h4>
+        <p class="role">Faculty Coordinator</p>
+      </div>
+
+      <div class="profile">
+        <img src="/images/president.jpg" alt="Vedant Sankpal" />
+        <h4>Vedant Sankpal</h4>
+        <p class="role">President</p>
+      </div>
+
+      <div class="profile placeholder">
+        <div class="placeholder-img"></div>
+        <h4>Technical Head</h4>
+        <p class="role">_______</p>
+      </div>
+
+      <div class="profile placeholder">
+        <div class="placeholder-img"></div>
+        <h4>Social Media Head</h4>
+        <p class="role">_______</p>
+      </div>
+
+      <div class="profile placeholder">
+        <div class="placeholder-img"></div>
+        <h4>PR Head</h4>
+        <p class="role">_______</p>
+      </div>
+
+      <div class="profile placeholder">
+        <div class="placeholder-img"></div>
+        <h4>Multimedia Head</h4>
+        <p class="role">_______</p>
+      </div>
     </div>
   </section>
 
-  <!-- General Modal -->
+  <!-- General Info Modal -->
   <div id="modal" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3 id="modal-title"></h3>
-      <p id="modal-text"></p>
+      <button class="modal-close" aria-label="close">&times;</button>
+      <h3 id="modal-title">Title</h3>
+      <p id="modal-text">Details...</p>
     </div>
   </div>
 
   <!-- Chatbot Modal -->
   <div id="chatbot-modal" class="modal">
     <div class="modal-content">
-      <span class="close" onclick="closeChat()">&times;</span>
+      <button class="modal-close" onclick="closeChat()">&times;</button>
       <h3>AI Chatbot</h3>
-      <div id="chat-window" style="background:#111;color:#fff;height:300px;overflow-y:auto;padding:10px;margin-bottom:10px;border-radius:5px;"></div>
-      <input type="text" id="chat-input" placeholder="Type a message..." style="width:70%;padding:8px;border:none;border-radius:3px;">
-      <button onclick="sendMessage()" style="padding:8px 12px;margin-left:5px;background:#e50914;color:#fff;border:none;border-radius:3px;">Send</button>
+      <div id="chat-window" class="chat-window"></div>
+      <div class="chat-controls">
+        <input id="chat-input" type="text" placeholder="Type a message..." />
+        <button id="chat-send">Send</button>
+      </div>
     </div>
   </div>
 
