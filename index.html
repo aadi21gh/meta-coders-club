@@ -83,73 +83,49 @@
   </section>
 
   <!-- Communities -->
-  <section class="row" id="communities">
-    <h2>Featured Communities</h2>
-    <div class="row-posters">
-      <article class="card">
-        <div class="overlay"></div>
-        <div class="card-content">
-          <h3>AI & ML</h3>
-          <p>Projects, workshops and hackathons in Machine Learning and AI.</p>
-          <button class="modal-btn" data-modal="AI-ML">Explore</button>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="overlay"></div>
-        <div class="card-content">
-          <h3>Web Development</h3>
-          <p>Frontend, backend and modern web app stacks.</p>
-          <button class="modal-btn" data-modal="WebDev">Explore</button>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="overlay"></div>
-        <div class="card-content">
-          <h3>Data Science</h3>
-          <p>Data analysis, visualizations and ML workflows.</p>
-          <button class="modal-btn" data-modal="DataScience">Explore</button>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="overlay"></div>
-        <div class="card-content">
-          <h3>Cyber Security</h3>
-          <p>Ethical hacking, security best practices and CTFs.</p>
-          <button class="modal-btn" data-modal="CyberSecurity">Explore</button>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="overlay"></div>
-        <div class="card-content">
-          <h3>DS & Algorithms</h3>
-          <p>Sharpen problem solving for interviews & contests.</p>
-          <button class="modal-btn" data-modal="DSA">Explore</button>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="overlay"></div>
-        <div class="card-content">
-          <h3>Cloud Computing</h3>
-          <p>Deploy and scale apps on AWS, Azure and GCP.</p>
-          <button class="modal-btn" data-modal="Cloud">Explore</button>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="overlay"></div>
-        <div class="card-content">
-          <h3>Other</h3>
-          <p>Niche topics, tools & experimental projects.</p>
-          <button class="modal-btn" data-modal="Other">Explore</button>
-        </div>
-      </article>
+  <section id="communities" class="communities-section">
+  <h2>Our Communities</h2>
+  <div class="community-cards">
+    <div class="community-card">
+      <img src="/images/webdev.jpg" alt="Web Development">
+      <h3>Web Development</h3>
+      <p>Build stunning and responsive web applications using HTML, CSS, JS, and React.</p>
+      <button class="explore-btn" onclick="openCommunityModal('Web Development', 'https://chat.whatsapp.com/your_webdev_group_link')">Explore Now</button>
     </div>
-  </section>
+
+    <div class="community-card">
+      <img src="/images/ai.jpg" alt="AI & ML">
+      <h3>AI & Machine Learning</h3>
+      <p>Dive into the world of Artificial Intelligence, ML models, and data science projects.</p>
+      <button class="explore-btn" onclick="openCommunityModal('AI & Machine Learning', 'https://chat.whatsapp.com/your_ai_ml_group_link')">Explore Now</button>
+    </div>
+
+    <div class="community-card">
+      <img src="/images/cyber.jpg" alt="Cybersecurity">
+      <h3>Cybersecurity</h3>
+      <p>Learn ethical hacking, network security, and cyber awareness with hands-on activities.</p>
+      <button class="explore-btn" onclick="openCommunityModal('Cybersecurity', 'https://chat.whatsapp.com/your_cyber_group_link')">Explore Now</button>
+    </div>
+
+    <div class="community-card">
+      <img src="/images/appdev.jpg" alt="App Development">
+      <h3>App Development</h3>
+      <p>Create powerful Android and cross-platform apps using Flutter and modern frameworks.</p>
+      <button class="explore-btn" onclick="openCommunityModal('App Development', 'https://chat.whatsapp.com/your_appdev_group_link')">Explore Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- Community Modal -->
+<div id="communityModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeCommunityModal()">&times;</span>
+    <h2 id="communityTitle"></h2>
+    <p>Ready to be part of something amazing? Join our official WhatsApp community to connect, learn, and grow with other developers!</p>
+    <a id="joinCommunityBtn" href="#" target="_blank" class="join-btn">Join Community</a>
+  </div>
+</div>
+
 
   <!-- Challenges -->
   <section class="row" id="challenges">
@@ -288,6 +264,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
