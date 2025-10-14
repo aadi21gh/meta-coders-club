@@ -1,16 +1,17 @@
-/* ---------------- horizontal scrolling for rows ---------------- */
-document.querySelectorAll('.row-posters').forEach(row=>{
-  row.addEventListener('wheel', e=>{
+/* ---------------- Horizontal Scrolling for Rows ---------------- */
+document.querySelectorAll('.row-posters').forEach(row => {
+  row.addEventListener('wheel', e => {
     e.preventDefault();
     row.scrollLeft += e.deltaY;
   });
 });
 
-/* ---------------- modal logic ---------------- */
+/* ---------------- Modal Logic ---------------- */
 const modal = document.getElementById('modal');
 const modalTitle = document.getElementById('modal-title');
-const modalText  = document.getElementById('modal-text');
+const modalText = document.getElementById('modal-text');
 const modalCloseBtns = document.querySelectorAll('.modal-close');
+
 const modalContent = {
   "AI-ML":"Learn and collaborate in AI & Machine Learning projects, workshops, and hackathons.",
   "WebDev":"Build and improve websites using HTML, CSS, JS and frameworks like React.",
@@ -29,57 +30,63 @@ const modalContent = {
   "DataViz":"Create interactive visualizations using modern JS libraries."
 };
 
-/* open general modal when clicking buttons with data-modal */
-document.querySelectorAll('.modal-btn').forEach(btn=>{
-  btn.addEventListener('click', ()=>{
+/* Open general modal when clicking buttons with data-modal */
+document.querySelectorAll('.modal-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
     const key = btn.getAttribute('data-modal');
-    const title = btn.parentElement.querySelector('h3') ? btn.parentElement.querySelector('h3').innerText : btn.parentElement.parentElement.querySelector('h2')?.innerText || key;
+    const title = btn.parentElement.querySelector('h3') 
+      ? btn.parentElement.querySelector('h3').innerText 
+      : btn.parentElement.parentElement.querySelector('h2')?.innerText || key;
     modalTitle.innerText = title;
     modalText.innerText = modalContent[key] || "More info coming soon!";
     modal.style.display = 'flex';
   });
 });
 
-/* close modal buttons */
-modalCloseBtns.forEach(b=>b.addEventListener('click', ()=>{ 
+/* Close modal buttons */
+modalCloseBtns.forEach(b => b.addEventListener('click', () => {
   b.closest('.modal').style.display = 'none';
 }));
 
-/* click outside to close */
-window.addEventListener('click', (e)=>{
-  document.querySelectorAll('.modal').forEach(m=>{
-    if(e.target === m) m.style.display = 'none';
+/* Click outside to close modal */
+window.addEventListener('click', (e) => {
+  document.querySelectorAll('.modal').forEach(m => {
+    if (e.target === m) m.style.display = 'none';
   });
 });
 
-/* ---------------- header scroll shadow + fade-in sections ---------------- */
+/* ---------------- Header Scroll Shadow + Fade-In Sections ---------------- */
 const header = document.querySelector('header');
-window.addEventListener('scroll', ()=>{
-  if(window.scrollY > 40) header.classList.add('scrolled'); else header.classList.remove('scrolled');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 40) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
 
-  document.querySelectorAll('.row, .hero, .featured-slider').forEach(section=>{
+  document.querySelectorAll('.row, .hero, .featured-slider').forEach(section => {
     const rect = section.getBoundingClientRect();
-    if(rect.top < window.innerHeight - 100){
+    if (rect.top < window.innerHeight - 100) {
       section.style.opacity = 1;
       section.style.transform = 'translateY(0)';
     }
   });
 });
 
-/* ---------------- featured slider ---------------- */
+/* ---------------- Featured Slider ---------------- */
 const slides = document.querySelectorAll('.slide');
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 let currentIndex = 0;
+
 function showSlide(i){
   currentIndex = (i + slides.length) % slides.length;
   document.querySelector('.slider').style.transform = `translateX(-${currentIndex * 100}%)`;
 }
-next?.addEventListener('click', ()=> showSlide(currentIndex + 1));
-prev?.addEventListener('click', ()=> showSlide(currentIndex - 1));
-setInterval(()=> showSlide(currentIndex + 1), 6000);
 
-/* ---------------- simple in-page AI chatbot (no external API) ---------------- */
+next?.addEventListener('click', () => showSlide(currentIndex + 1));
+prev?.addEventListener('click', () => showSlide(currentIndex - 1));
+
+setInterval(() => showSlide(currentIndex + 1), 6000);
+
+/* ---------------- Simple In-Page AI Chatbot ---------------- */
 const chatbotModal = document.getElementById('chatbot-modal');
 const chatWindow = document.getElementById('chat-window');
 const chatInput  = document.getElementById('chat-input');
@@ -97,7 +104,7 @@ function closeChat(){
 }
 
 chatSend?.addEventListener('click', sendMessage);
-chatInput?.addEventListener('keydown', (e)=>{ if(e.key === 'Enter') sendMessage(); });
+chatInput?.addEventListener('keydown', (e) => { if (e.key === 'Enter') sendMessage(); });
 
 function sendMessage(){
   const txt = chatInput.value.trim();
@@ -116,31 +123,29 @@ function sendMessage(){
   else if(msg.includes('projects')) bot = "Featured projects: AI Chatbot, Portfolio Website, Game Dev, Data Visualizer.";
   else if(msg.includes('communities')) bot = "Communities include AI&ML, Web Dev, Data Science, Cyber Security, DSA, Cloud and Other.";
 
-  setTimeout(()=> {
+  setTimeout(() => {
     chatWindow.innerHTML += `<p><em>Chatbot: ${escapeHtml(bot)}</em></p>`;
     chatWindow.scrollTop = chatWindow.scrollHeight;
   }, 500);
 }
 
-/* small helper to avoid html injection in chat */
+/* Escape HTML for chat */
 function escapeHtml(unsafe){
   return unsafe.replace(/[&<"'>]/g, function(m){ 
     return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]; 
   });
 }
 
-/* ---------------- community modal (join WhatsApp link) ---------------- */
+/* ---------------- Community Modal (WhatsApp Join Link) ---------------- */
 function openCommunityModal(title, link) {
   document.getElementById('communityTitle').textContent = title;
   document.getElementById('joinCommunityBtn').href = link;
   document.getElementById('communityModal').style.display = 'flex';
 }
-
 function closeCommunityModal() {
   document.getElementById('communityModal').style.display = 'none';
 }
-
-window.addEventListener('click', (event)=>{
+window.addEventListener('click', (event) => {
   const modal = document.getElementById('communityModal');
   if(event.target === modal) closeCommunityModal();
 });
