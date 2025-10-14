@@ -42,7 +42,6 @@ document.querySelectorAll('.modal-btn').forEach(btn=>{
 
 /* close modal buttons */
 modalCloseBtns.forEach(b=>b.addEventListener('click', ()=>{ 
-  // close whichever modal this button is inside
   b.closest('.modal').style.display = 'none';
 }));
 
@@ -125,5 +124,23 @@ function sendMessage(){
 
 /* small helper to avoid html injection in chat */
 function escapeHtml(unsafe){
-  return unsafe.replace(/[&<"'>]/g, function(m){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]; });
+  return unsafe.replace(/[&<"'>]/g, function(m){ 
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]; 
+  });
 }
+
+/* ---------------- community modal (join WhatsApp link) ---------------- */
+function openCommunityModal(title, link) {
+  document.getElementById('communityTitle').textContent = title;
+  document.getElementById('joinCommunityBtn').href = link;
+  document.getElementById('communityModal').style.display = 'flex';
+}
+
+function closeCommunityModal() {
+  document.getElementById('communityModal').style.display = 'none';
+}
+
+window.addEventListener('click', (event)=>{
+  const modal = document.getElementById('communityModal');
+  if(event.target === modal) closeCommunityModal();
+});
