@@ -257,3 +257,5 @@ nav a:hover { color: var(--accent); transform: translateY(-1px); transition: all
   .row-posters { gap: 10px; }
   .card { min-width: 170px; }
 }
+
+/* contact grid */ .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:14px} .profile{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:14px;border-radius:10px;text-align:center} .profile img{width:120px;height:120px;border-radius:8px;object-fit:cover;margin:0 auto 10px;display:block} .profile h4{margin-bottom:6px} .role{color:var(--muted)} .placeholder .placeholder-img{width:120px;height:120px;border-radius:8px;background:linear-gradient(90deg,#222,#333);margin:0 auto 10px}
