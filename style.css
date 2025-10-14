@@ -186,3 +186,104 @@ nav a:hover{color:var(--accent);transform:translateY(-1px);transition:all .18s}
   background: #111;
   color: #aaa;
 }
+
+/* Communities Section */
+.communities-section {
+  background: #000;
+  padding: 80px 8%;
+  color: #fff;
+  text-align: center;
+}
+.community-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.community-card {
+  background: #141414;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 280px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+.community-card:hover {
+  transform: scale(1.05);
+}
+.community-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.community-card h3 {
+  color: #e50914;
+  margin: 10px 15px 5px;
+}
+.community-card p {
+  margin: 0 15px 15px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+.explore-btn {
+  display: block;
+  background: #e50914;
+  color: #fff;
+  border: none;
+  margin: 0 15px 20px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.explore-btn:hover {
+  background: #f40612;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #111;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  color: #fff;
+  position: relative;
+}
+.modal-content h2 {
+  color: #e50914;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+.join-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #25D366;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.join-btn:hover {
+  background: #1ebe5d;
+}
