@@ -1,123 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Meta Coders Club</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Header / Navbar -->
-  <header class="navbar">
-    <a href="#" class="logo">Meta Coders Club</a>
+  <header>
+    <div class="brand">
+      <img src="/logo.png" alt="Meta Coders Club" class="logo" />
+      <div class="brand-text">Meta Coders Club</div>
+    </div>
     <nav>
-      <a href="#home">Home</a>
-      <a href="#communities">Communities</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#communities">Communities</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Featured slider -->
+  <section class="featured-slider">
+    <div class="slider">
+      <div class="slide active" style="background-image:url('aiml.jpg');">
+        <div class="slide-content">
+          <h2>AI & ML Community</h2>
+          <p>Join projects, workshops and hackathons in Artificial Intelligence & Machine Learning.</p>
+          <button class="modal-btn" data-modal="AI-ML">Explore</button>
+        </div>
+      </div>
+      <div class="slide" style="background-image:url('webdevelopment.jpg');">
+        <div class="slide-content">
+          <h2>Web Development</h2>
+          <p>Build modern websites and web apps using the latest technologies.</p>
+          <button class="modal-btn" data-modal="WebDev">Explore</button>
+        </div>
+      </div>
+      <div class="slide" style="background-image:url('datascience.jpg');">
+        <div class="slide-content">
+          <h2>Data Science</h2>
+          <p>Analyze and visualize data, implement ML models, and gain insights.</p>
+          <button class="modal-btn" data-modal="DataScience">Explore</button>
+        </div>
+      </div>
+      <div class="slide" style="background-image:url('cybersecurity.jpg');">
+        <div class="slide-content">
+          <h2>Cyber Security</h2>
+          <p>Learn ethical hacking, security best practices and CTFs.</p>
+          <button class="modal-btn" data-modal="CyberSecurity">Explore</button>
+        </div>
+      </div>
+      <div class="slide" style="background-image:url('dsa.jpg');">
+        <div class="slide-content">
+          <h2>Data Structure and Algorithms</h2>
+          <p>Sharpen problem solving for interviews and contests.</p>
+          <button class="modal-btn" data-modal="DSA">Explore</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider-controls">
+      <span class="prev">&#10094;</span>
+      <span class="next">&#10095;</span>
+    </div>
+  </section>
+
+  <!-- Home / hero -->
   <section class="hero" id="home">
     <div class="hero-inner">
-      <img src="/logo.png" class="hero-logo" alt="Meta Coders Logo" />
+      <img src="/logo.png" alt="logo-glow" class="hero-logo" />
       <h1>Welcome to Meta Coders Club</h1>
-      <p class="subtitle">Learn, Build & Innovate in Technology</p>
-      <p class="lead">Join a community of passionate coders, AI enthusiasts, web developers, and more. Participate in hackathons, workshops, and exciting projects.</p>
+      <p class="subtitle">Where Coders Create, Collaborate, and Conquer.</p>
+      <p class="lead">
+        Meta Coders Club is a vibrant community of passionate programmers, designers, and tech enthusiasts who believe in learning through collaboration and innovation. The club serves as a platform for students to explore emerging technologies, enhance their technical skills, and apply their knowledge to solve real-world challenges.
+
+Through workshops, hackathons, coding competitions, and project showcases, we aim to create a culture of creativity, teamwork, and continuous learning.</p>
+
+<p>Vision:</p>
+<p>To build a community that inspires innovation and empowers students to become future-ready technologists, capable of creating impactful digital solutions for society.</p>
+
+<p>Mission:</p>
+<ul>
+  <li>Encourage hands-on learning and knowledge sharing.</li>
+  <li>Organize events that promote problem-solving and innovation.</li>
+  <li>Provide mentorship and guidance in various technical domains.</li>
+  <li>Foster collaboration and teamwork among members.</li>
+</ul>
+
+<p>Motto: “Think. Code. Create.”</p>
+
+<a href="https://www.instagram.com/metacodersclub" class="cta">Join Us</a>
+</div>
+</section>
+
+<!-- Communities -->
+<section id="communities" class="communities-section">
+  <h2>Our Communities</h2>
+  <div class="community-cards">
+    <div class="community-card">
+      <h3>Web Development</h3>
+      <p>Build stunning and responsive web applications using HTML, CSS, JS, and React.</p>
+      <button class="explore-btn" onclick="openCommunityModal('Web Development', 'https://chat.whatsapp.com/BYR1hiBBF4qLGrCVzoTyTl?mode=ems_copy_t')">Explore Now</button>
     </div>
-  </section>
-
-  <!-- Communities Section -->
-  <section class="communities-section" id="communities">
-    <h2>Our Communities</h2>
-    <div class="community-cards">
-      <div class="community-card">
-        <img src="/ai-ml.jpg" alt="AI & ML">
-        <h3>AI & ML</h3>
-        <p>Learn and collaborate on AI & Machine Learning projects.</p>
-        <button class="explore-btn" onclick="openCommunityModal('AI & ML', 'https://chat.whatsapp.com/ai-ml-link')">Join WhatsApp</button>
-      </div>
-      <div class="community-card">
-        <img src="/webdev.jpg" alt="Web Dev">
-        <h3>Web Dev</h3>
-        <p>Build websites and web apps using modern technologies.</p>
-        <button class="explore-btn" onclick="openCommunityModal('Web Dev', 'https://chat.whatsapp.com/webdev-link')">Join WhatsApp</button>
-      </div>
-      <div class="community-card">
-        <img src="/datascience.jpg" alt="Data Science">
-        <h3>Data Science</h3>
-        <p>Work on datasets, visualize insights and ML models.</p>
-        <button class="explore-btn" onclick="openCommunityModal('Data Science', 'https://chat.whatsapp.com/datascience-link')">Join WhatsApp</button>
-      </div>
-      <!-- Add more community cards if needed -->
+    <div class="community-card">
+      <h3>Data Science</h3>
+      <p>Analyze and visualize data, implement ML models, and gain insights.</p>
+      <button class="explore-btn" onclick="openCommunityModal('Data Science', 'https://chat.whatsapp.com/LWyGNT0HjNfCXtO5UgxNLn?mode=ems_copy_t')">Explore Now</button>
     </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section class="row" id="projects">
-    <h2>Featured Projects</h2>
-    <div class="row-posters">
-      <div class="card">
-        <img src="/ai-chatbot.jpg" alt="AI Chatbot">
-        <div class="overlay"></div>
-        <div class="card-content">
-          <h3>AI Chatbot</h3>
-          <p>Build intelligent chatbots for web & mobile applications.</p>
-          <button class="modal-btn" data-modal="AI-ML">More Info</button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="/portfolio.jpg" alt="Portfolio Website">
-        <div class="overlay"></div>
-        <div class="card-content">
-          <h3>Portfolio Website</h3>
-          <p>Create stunning personal portfolio websites.</p>
-          <button class="modal-btn" data-modal="Portfolio">More Info</button>
-        </div>
-      </div>
-      <!-- Add more project cards -->
+    <div class="community-card">
+      <h3>AI & Machine Learning</h3>
+      <p>Dive into the world of Artificial Intelligence, ML models, and data science projects.</p>
+      <button class="explore-btn" onclick="openCommunityModal('AI & Machine Learning', 'https://chat.whatsapp.com/your_ai_ml_group_link')">Explore Now</button>
     </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="row contact" id="contact">
-    <h2>Contact Us</h2>
-    <div class="contact-grid">
-      <div class="profile">
-        <img src="/profile1.jpg" alt="Aditya Ambhure">
-        <h4>Aditya Ambhure</h4>
-        <p class="role">President</p>
-      </div>
-      <div class="profile">
-        <img src="/profile2.jpg" alt="Member 2">
-        <h4>Riya Sharma</h4>
-        <p class="role">Vice President</p>
-      </div>
-      <div class="profile">
-        <img src="/profile3.jpg" alt="Member 3">
-        <h4>Vikram Patil</h4>
-        <p class="role">Secretary</p>
-      </div>
-      <!-- Add more profiles if needed -->
+    <div class="community-card">
+      <h3>Cybersecurity</h3>
+      <p>Learn ethical hacking, network security, and cyber awareness with hands-on activities.</p>
+      <button class="explore-btn" onclick="openCommunityModal('Cybersecurity', 'https://chat.whatsapp.com/your_cyber_group_link')">Explore Now</button>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2025 Meta Coders Club | All Rights Reserved</p>
-  </footer>
-
-  <!-- Community Modal -->
-  <div class="modal" id="communityModal">
-    <div class="modal-content">
-      <span class="close" onclick="closeCommunityModal()">&times;</span>
-      <h2 id="communityTitle">Community</h2>
-      <a id="joinCommunityBtn" href="#" class="join-btn" target="_blank">Join WhatsApp</a>
+    <div class="community-card">
+      <h3>App Development</h3>
+      <p>Create powerful Android and cross-platform apps using Flutter and modern frameworks.</p>
+      <button class="explore-btn" onclick="openCommunityModal('App Development', 'https://chat.whatsapp.com/your_appdev_group_link')">Explore Now</button>
     </div>
   </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- Community Modal -->
+<div id="communityModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeCommunityModal()">&times;</span>
+    <h2 id="communityTitle"></h2>
+    <p>Ready to be part of something amazing? Join our official WhatsApp community to connect, learn, and grow with other developers!</p>
+    <a id="joinCommunityBtn" href="#" target="_blank" class="join-btn">Join Community</a>
+  </div>
+</div>
+
+<!-- Challenges Section -->
+<section class="row" id="challenges">
+  <h2>Coding Challenges</h2>
+  <div class="row-posters">
+    <article class="card">
+      <div class="overlay"></div>
+      <div class="card-content">
+        <h3>Web Dev Challenge</h3>
+        <p>Build a responsive site in 48 hours.</p>
+        <button class="modal-btn" data-modal="WebChallenge">Join</button>
+      </div>
+    </article>
+    <article class="card">
+      <div class="overlay"></div>
+      <div class="card-content">
+        <h3>AI/ML Challenge</h3>
+        <p>Create predictive models and pipelines.</p>
+        <button class="modal-btn" data-modal="AIChallenge">Join</button>
+      </div>
+    </article>
+    <article class="card">
+      <div class="overlay"></div>
+      <div class="card-content">
+        <h3>Game Dev Contest</h3>
+        <p>Build a small interactive game.</p>
+        <button class="modal-btn" data-modal="GameChallenge">Join</button>
+      </div>
+    </article>
+    <article class="card">
+      <div class="overlay"></div>
+      <div class="card-content">
+        <h3>Data Science Hack</h3>
+        <p>Analyze data, find insights and present them.</p>
+        <button class="modal-btn" data-modal="DataChallenge">Join</button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Events -->
+<section id="events" class="events-section">
+  <h2>Events</h2>
+  <div class="event-card">
+    <img src="techmanthan-poster.jpg" alt="Tech Manthan Poster">
+    <div class="event-info">
+      <h3>Tech Manthan 2025</h3>
+      <p>Meta Coders Club’s annual flagship event filled with innovation, coding, and creativity.</p>
+      <a href="tech-manthan.html" class="btn">View Details</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2025 Meta Coders Club | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
