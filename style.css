@@ -105,96 +105,84 @@ nav a:hover{color:var(--accent);transform:translateY(-1px);transition:all .18s}
   .row-posters{gap:10px}
   .card{min-width:170px}
 }
-.events-section {
-  padding: 80px 50px;
-  background: linear-gradient(to bottom, #0a0a0a, #111);
-  color: #fff;
-}
-
-.event-hero {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.event-hero h3 {
-  font-size: 2rem;
-  color: #e50914;
-}
-
-.event-hero p {
-  font-size: 1.1rem;
-  color: #ddd;
-  margin-bottom: 20px;
-}
-
-.event-hero .btn {
-  padding: 10px 25px;
-  background-color: #e50914;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.event-hero .btn:hover {
-  background-color: #b0060f;
-  transform: scale(1.05);
-}
-
-.event-details ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 40px;
-}
-
-.event-details li {
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
-
-.event-gallery .gallery-row {
+.events-section .event-card {
+  background: #141414;
+  border-radius: 15px;
+  overflow: hidden;
   display: flex;
-  gap: 15px;
-  overflow-x: auto;
-}
-
-.event-gallery img {
-  width: 300px;
-  border-radius: 10px;
+  align-items: center;
+  margin: 30px auto;
+  max-width: 800px;
   transition: transform 0.3s;
 }
-
-.event-gallery img:hover {
-  transform: scale(1.05);
+.event-card:hover { transform: scale(1.03); }
+.event-card img {
+  width: 40%;
+  object-fit: cover;
 }
+.event-info {
+  padding: 20px;
+}
+.event-info h3 { color: #e50914; }
+.event-info .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #e50914;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.event-info .btn:hover { background: #f40612; }
 
-.output-cards {
+/* Detail Page */
+.event-detail-page { color: #fff; background: #000; }
+.event-hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+}
+.event-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+.event-hero .hero-text {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+}
+.event-hero .hero-text h1 {
+  font-size: 3rem;
+  color: #e50914;
+}
+.event-subsection {
+  padding: 60px 8%;
+}
+.event-gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px;
 }
-
-.output-card {
-  flex: 1 1 300px;
-  background-color: #1a1a1a;
-  padding: 20px;
+.event-gallery img {
+  width: calc(33% - 10px);
   border-radius: 10px;
-  transition: transform 0.3s ease;
 }
-
-.output-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(229,9,20,0.4);
+.event-video video {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 20px;
 }
-
-.event-video {
-  margin-top: 50px;
+.event-outcome-photo {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+.footer {
   text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #aaa;
 }
-
-.event-video iframe {
-  width: 90%;
-  max-width: 700px;
-  border-radius: 10px;
-}
-
