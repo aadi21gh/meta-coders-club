@@ -136,12 +136,21 @@ function openCommunityModal(title, link){
 }
 function closeCommunityModal(){ document.getElementById('communityModal').style.display = 'none'; }
 
-// Coming Soon alert for slider Explore button only
+// Coming Soon alert for Slider Explore button
 document.querySelectorAll('.slide-content button').forEach(btn => {
   btn.addEventListener('click', e => {
     e.preventDefault();
     alert('🚀 Coming Soon!');
   });
 });
+
+// Coming Soon alert for Coding Challenges Join button
+document.querySelectorAll('.coding-challenges .join-btn').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    alert('🚀 Coming Soon!');
+  });
+});
+
 
 
