@@ -136,3 +136,9 @@ function openCommunityModal(title, link){
 }
 function closeCommunityModal(){ document.getElementById('communityModal').style.display = 'none'; }
 
+document.querySelectorAll('.explore-btn').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    alert('🚀 Coming Soon!');
+  });
+});
